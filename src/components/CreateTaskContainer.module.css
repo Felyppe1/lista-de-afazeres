@@ -1,0 +1,26 @@
+.searchForm {
+    background-color: transparent;
+    display: flex;
+    gap: 1rem;
+    transform: translateY(-50%);
+}
+
+.searchForm input {
+    background-color: var(--gray-500);
+    color: var(--gray-100);
+    border-radius: 8px;
+    padding: 1rem;
+    width: 100%;
+}
+
+.searchForm button {
+    background-color: var(--blueDark);
+    color: #F2F2F2;
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 1rem;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+} 

@@ -1,0 +1,43 @@
+.tasksContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.tasksQuantity {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tasksQuantity > div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.tasksQuantity div:first-child p {
+    color: var(--blue);
+    font-weight: 700;
+    font-size: 0.875rem;
+}
+
+.tasksQuantity div:last-child p {
+    color: var(--purple);
+    font-weight: 700;
+    font-size: 0.875rem;
+}
+
+.tasksQuantity > div > div {
+    background-color: var(--gray-400);
+    color: var(--gray-200);
+    padding: 0.125rem .5rem;
+    border-radius: 5rem;
+    font-size: .75rem;
+    font-weight: 700;
+}
+
+.tasksList {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
