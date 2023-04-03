@@ -13,8 +13,10 @@ export function CreateTaskContainer({ tasksList, setNewTask }) {
     function handleCreateNewTask() {
         event.preventDefault()
 
-        setNewTask([...tasksList, {id: uuidv4(), done: false, content: newTaskText}]) 
-        setNewTaskText('')
+        if (newTaskText != '') {
+            setNewTask([...tasksList, {id: uuidv4(), done: false, content: newTaskText}]) 
+            setNewTaskText('')
+        }
     }
     console.log(tasksList)
  

@@ -13,10 +13,20 @@ export function Task({id, done, content, onDeleteTask, onChangeTaskStatus}) {
 
     let taskStyle 
     if (done) {
-        taskStyle = <div><button className={styles.checkboxChecked} onClick={handleTaskStatus}><Check size={13}/></button><label htmlFor={id} className={styles.labelChecked}>{content}</label></div>
+        taskStyle = (
+            <div>
+                <button className={`${styles.checkboxBtn} ${styles.checkboxChecked}`} onClick={handleTaskStatus}><Check size={13}/></button>
+                <label htmlFor={id} className={styles.labelChecked} onClick={handleTaskStatus}>{content}</label>
+            </div>
+        )
     }
     else {
-        taskStyle = <div><button className={styles.checkboxUnchecked} onClick={handleTaskStatus}></button><label htmlFor={id}>{content}</label></div>
+        taskStyle = (
+            <div>
+                <button className={`${styles.checkboxBtn} ${styles.checkboxUnchecked}`} onClick={handleTaskStatus}></button>
+                <label htmlFor={id} onClick={handleTaskStatus}>{content}</label>
+            </div>
+        )
     }
 
     return (
